@@ -1,0 +1,118 @@
+/* --------Colours used in the design (Primary and secondary)------- */
+:root {
+    --light-blue: hsl(193, 38%, 86%);
+    --green: hsl(150, 100%, 66%);
+    --card-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+    font-family: "Manrope", sans-serif;
+    padding: 20px;
+}
+
+
+.advice-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.advice-card {
+    position: relative;
+    width: 100%;
+    max-width: 540px;
+    background-color: var(--card-blue);
+    text-align: center;
+    padding: 48px 40px 64px;
+    border-radius: 15px;
+}
+
+/* Advice number */
+.advice-title {
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
+}
+
+/* Advice text */
+.advice-text {
+    color: var(--light-blue);
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.4;
+    margin-bottom: 32px;
+}
+
+/* Divider image */
+.divider img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Dice button */
+.dice-button {
+    position: absolute;
+    left: 50%;
+    bottom: -32px;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--green);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+
+.dice-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.dice-button:hover {
+    box-shadow: 0 0 30px var(--green);
+}
+
+
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px;
+    }
+
+    .advice-card {
+        padding: 40px 24px 56px;
+    }
+
+    .advice-text {
+        font-size: 24px;
+    }
+
+    .dice-button {
+        width: 64px;
+        height: 64px;
+    }
+}
